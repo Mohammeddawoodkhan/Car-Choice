@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cars Choice</title>
+  <style>
+    /* ---- Global ---- */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #121212;
+      color: #e0f7fa;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ---- Header ---- */
+    header {
+      background-color: #1a1a1a;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: #e0f7fa;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #00bcd4;
+    }
+
+    .welcome {
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('BG.gif') no-repeat center center/cover;
+      padding: 6rem 2rem;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .welcome h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .welcome p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    section {
+      padding: 4rem 1rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      border-bottom: 3px solid #00bcd4;
+      display: inline-block;
+      padding-bottom: 0.3rem;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2.5rem;
+      margin-top: 2rem;
+    }
+
+    .car-card {
+      background: #1e1e1e;
+      border-radius: 12px;
+      padding: 1rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .car-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 30px rgba(0, 188, 212, 0.4);
+    }
+
+    .car-card img {
+      width: 100%;
+      border-radius: 10px;
+      loading: lazy;
+    }
+
+    .car-card h3 {
+      margin: 0.8rem 0 0.4rem;
+      color: #00bcd4;
+      font-size: 1.2rem;
+    }
+
+    .car-card p {
+      font-size: 1rem;
+    }
+
+    .car-card a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      color: #00bcd4;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .car-card a:hover {
+      text-decoration: underline;
+      color: #0097a7;
+    }
+
+    form {
+      background-color: #1a1a1a;
+      padding: 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(0,188,212,0.1);
+      max-width: 550px;
+      margin: 2rem auto 0;
+      text-align: left;
+    }
+
+    form label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+      color: #00bcd4;
+    }
+
+    form input[type="text"],
+    form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 0.5rem;
+      border: 1px solid #555;
+      border-radius: 6px;
+      background-color: #000;
+      color: #fff;
+      font-size: 1.1rem;
+    }
+
+    form textarea {
+      resize: vertical;
+    }
+
+    form input[type="submit"] {
+      margin-top: 1.5rem;
+      background-color: #00bcd4;
+      color: black;
+      font-weight: bold;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    form input[type="submit"]:hover {
+      background-color: #0097a7;
+    }
+
+    footer {
+      background-color: #00bcd4;
+      color: #000;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .welcome {
+        padding: 4rem 2rem;
+      }
+
+      section {
+        padding: 3rem 1rem;
+      }
+
+      footer {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Cars Choice</h1>
+    <nav>
+      <ul>
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#Available">Available</a></li>
+        <li><a href="#Performance">Performance</a></li>
+        <li><a href="#Comparison">Comparison</a></li>
+        <li><a href="#Contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="welcome">
+    <div class="container">
+      <h2>Welcome to Cars Choice</h2>
+      <p>Explore a curated selection of high-performance cars and make an informed decision with detailed specs, comparisons, and expert insights.</p>
+    </div>
+  </section>
+
+  <section id="Available">
+    <div class="container">
+      <h2>Available Cars</h2>
+      <div class="card-grid">
+        <div class="car-card">
+          <img src="bmw.jpg" alt="BMW M4" />
+          <h3>BMW M4</h3>
+          <p>₹1.5 Cr | 503 hp | 3.8s (0-100 km/h)</p>
+          <a href="https://www.bmw.in/en/index.html">Visit Official</a>
+        </div>
+        <div class="car-card">
+          <img src="lambo.jpg" alt="Lamborghini Huracán" />
+          <h3>Lamborghini Huracán</h3>
+          <p>₹4 Cr | 640 hp | 2.9s (0-100 km/h)</p>
+          <a href="https://www.lamborghini.com">Visit Official</a>
+        </div>
+        <!-- Other car cards go here -->
+      </div>
+    </div>
+  </section>
+
+  <section id="Performance">
+    <div class="container">
+      <h2>Performance</h2>
+      <p>Discover the true power of high-performance engineering with our detailed brand insights.</p>
+      <!-- Performance details go here -->
+    </div>
+  </section>
+
+  <section id="Comparison">
+    <div class="container">
+      <h2>Comparison</h2>
+      <p>Quick specs comparison:</p>
+      <!-- Comparison grid goes here -->
+    </div>
+  </section>
+
+  <section id="Contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Phone: 8904435169 | Email: <a href="mailto:dawoodkhan.dk42@gmail.com">Carschoice@gmail.com</a></p>
+      <form action="#">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Your Name" />
+        <label for="message">Message</label>
+        <textarea id="message" rows="5" placeholder="Your Message"></textarea>
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Cars Choice. All rights reserved.</p>
+  </footer>
+</body>
+</html>

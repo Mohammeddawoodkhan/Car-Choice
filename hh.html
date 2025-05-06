@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cars Choice</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background-color: #000000;
+	    text-align:center;
+      color: #ffffff;
+    }
+
+    header {
+      background-color: #1a1a1a;
+      color: #fff;
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #00bcd4;
+    }
+
+    .welcome {
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('gg.gif')no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .welcome h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .welcome p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    section {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .car-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #00bcd4;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    section img {
+      width: 200px;
+      border-radius: 10px;
+      margin: 1rem 1rem 0 0;
+    }
+    form {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      max-width: 500px;
+      margin: 2rem auto;
+    }
+    form label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+    form input[type="text"],
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    form textarea {
+      resize: vertical;
+    }
+    .car-list a img {
+      width: 200px;
+      border-radius: 10px;
+      display: block;
+    }
+
+    form input[type="button"] {
+      margin-top: 1rem;
+      background-color: #00bcd4;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    form input[type="button"]:hover {
+      background-color: #0097a7;
+    }
+
+    footer {
+      background-color: #00bcd4;
+      color: #000000;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
+    }
+
+    a {
+      color: #00bcd4;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Cars Choice</h1>
+    <nav>
+      <ul>
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#Available">Available</a></li>
+        <li><a href="#Performance">Performance</a></li>
+        <li><a href="#Contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="welcome">
+    <div class="container">
+      <h2>Hello There!</h2>
+      <p>This is a curated space to help you explore high-performance cars. Discover specifications, brands, and performance insights to help you choose your perfect wheels.</p>
+    </div>
+  </section>
+
+  <section id="Home">
+    <div class="container">
+      <h2>Home</h2>
+      <p>Cars are more than just a means of transport. They reflect performance, innovation, and style. Explore the engineering marvels and design philosophy behind today's most iconic vehicles.</p>
+    </div>
+  </section>
+
+  <section id="Available">
+    <div class="container">
+      <h2>Available</h2>
+      <div class="car-list">
+        <a href="https://www.bmw.in/en/index.html"><img src="bmw.jpg" alt="BMW"></a>
+        <a href="https://www.lamborghini.com"><img src="lambo.jpg" alt="Lamborghini"></a>
+        <a href="https://www.mercedes-benz.co.in"><img src="benz.jpg" alt="Mercedes-Benz"></a>
+        <a href="https://myaudi.in"><img src="audi.jpg" alt="Audi"></a>
+        <a href="https://cars.mclaren.com/en"><img src="mclaren.jpg" alt="McLaren"></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="Performance">
+    <div class="container">
+      <h2>Performance</h2>
+      <p><strong>BMW:</strong> Precision-tuned M models with exhilarating speed and responsive handling. <a href="https://www.bmw-m.com/en/index.html">Explore BMW M</a></p>
+      <p><strong>Lamborghini:</strong> Known for aggressive design and unmatched horsepower. <a href="https://www.lamborghini.com/en-en/history/huracan-performante">Explore Huracan</a></p>
+      <p><strong>Mercedes-Benz:</strong> AMG performance with elegant power delivery and hybrid boosts. <a href="https://www.mercedes-benz.co.in/passengercars/technology/amg-e-performance.html">Explore AMG E</a></p>
+      <p><strong>Audi:</strong> Quattro performance with RS-level tuning. <a href="https://www.audiusa.com/en/inside-audi/innovation/audi-sport/about-audi-sport/">Explore Audi Sport</a></p>
+      <p><strong>McLaren:</strong> Super-light, ultra-fast, race-bred performance. <a href="https://www.mclaren.com/racing">Explore McLaren</a></p>
+    </div>
+  </section>
+
+  <section id="Contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Phone: 8904435169 | Email: <a href="mailto:dawoodkhan.dk42@gmail.com">Carschoice@gmail.com</a></p>
+
+      <form action="#">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Your Name" />
+
+        <label for="message">Message</label>
+        <textarea id="message" rows="5" placeholder="Your Message"></textarea>
+
+        <input type="button" value="Submit" />
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Cars Choice. All rights reserved.</p>
+  </footer>
+</body>
+</html>
